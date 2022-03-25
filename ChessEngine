@@ -1,0 +1,23 @@
+"""
+This class is responsible for storing all the information about the current state of a chess game.
+ Also, responsible for determining valid moves at current state. Will also keep move log.
+"""
+
+
+class GameState():
+    def __init__(self):
+        self.board = [
+            # 8x8 board, 2-d list, each element has 2 characters.
+            # First character is the color of the element.
+            # Second character is the type of the element.
+            # "--" represents an open space.
+            ["bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR"],
+            ["bp", "bp", "bp", "bp", "bp", "bp", "bp", "bp"],
+            ["--", "--", "--", "--", "--", "--", "--", "--"],
+            ["--", "--", "--", "--", "--", "--", "--", "--"],
+            ["--", "--", "--", "--", "--", "--", "--", "--"],
+            ["--", "--", "--", "--", "--", "--", "--", "--"],
+            ["wp", "wp", "wp", "wp", "wp", "wp", "wp", "wp"],
+            ["wR", "wN", "wB", "wQ", "wK", "wB", "wN", "wR"]]
+        self.whiteToMove = True
+        self.moveLog = []
